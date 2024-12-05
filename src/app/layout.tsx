@@ -5,11 +5,6 @@ import "../styles/globals.css";
 
 import React from "react";
 
-export const metadata = {
-  title: "Weather Portal Landing Page",
-  description: "First Next.js landing page project.",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -18,21 +13,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>Weather Portal Landing Page</title>
+        <meta name="description" content="First Next.js landing page project." />
         {/* Google Analytics */}
-        <script
-          async
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-9R6B3TL903"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-9R6B3TL903');
-            `,
-          }}
+          strategy="afterInteractive"
         />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9R6B3TL903');
+          `}
+        </Script>
       </head>
       <body>{children}</body>
     </html>

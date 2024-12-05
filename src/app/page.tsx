@@ -3,7 +3,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
-import RadarMap from "../components/RadarMap";
+import RadarMap from "../components/RadarMap/RadarMap";
 import News from "../components/News";
 
 import React from "react";
